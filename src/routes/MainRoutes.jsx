@@ -2,12 +2,13 @@ import AdminPages from "../pages/AdminPages";
 import EditProductPage from "../pages/EditProductPage";
 import { Route, Routes } from 'react-router-dom';
 import ProductList from "../components/crud/ProductList";
+import HomePage from "../pages/HomePage";
 
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
     {
-      link: '/AdminPages',
+      link: '/adminPage',
       element: <AdminPages/>,
       id: 1,
     },{
@@ -18,7 +19,12 @@ const MainRoutes = () => {
     {
       link: '/products',
       element: <ProductList />,
-      id: 2,
+      id: 3,
+    },
+    {
+      link: '/',
+      element: <HomePage />,
+      id: 3,
     }
   ];
 

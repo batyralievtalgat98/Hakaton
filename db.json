@@ -1,14 +1,7 @@
 {
   "products": [
     {
-      "name": "sd",
-      "description": "sdssssssssssssaaaaaaaaaaaaaa",
-      "price": "55555555555555",
-      "picture": "sd3333333333333333",
-      "id": 1
-    },
-    {
-      "name": "",
+      "name": "ssssssssssssssssssssssssss",
       "description": "",
       "price": 0,
       "picture": "",
@@ -22,11 +15,25 @@
       "id": 3
     },
     {
-      "name": "aaaaaaaa",
-      "description": "aaaaaaaaaaa",
-      "price": "465",
-      "picture": "aaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbb",
-      "id": 4
+      "name": "gfgssd",
+      "description": "gfsgd",
+      "price": null,
+      "picture": "sdfdssdf",
+      "id": 6
+    },
+    {
+      "name": "ddddddddddddddd",
+      "description": "dddddddddddd",
+      "price": 0,
+      "picture": "",
+      "id": 7
+    },
+    {
+      "name": "sddsds",
+      "description": "dssdds",
+      "price": null,
+      "picture": "dssdds",
+      "id": 8
     }
   ]
 }

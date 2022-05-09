@@ -1,9 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Box, Button, TextField } from '@mui/material';
 import { productContext, useProducts } from '../../contexts/CrudContextProvider';
+import { useNavigate } from 'react-router-dom';
 const AddProduct = () => {
 
   const{ addProduct }=useProducts()
+
+  const navigate = useNavigate()
 
   const [product, setProduct]= useState({
     name: '',
@@ -86,6 +89,7 @@ const AddProduct = () => {
         size="large"
         onClick={()=>{
           addProduct(product);
+          navigate('/products');
         }}
       >
        Add product
