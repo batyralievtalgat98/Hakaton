@@ -1,11 +1,13 @@
-<<<<<<< HEAD
-=======
 import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> 7d89e21876af626f51138580fb4d06c65dcbd551
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div>
+
+
+      <Footer />
+
 
     </div>
   );
