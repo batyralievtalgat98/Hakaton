@@ -1,5 +1,39 @@
 {
-  "products":[
-
+  "products": [
+    {
+      "name": "ssssssssssssssssssssssssss",
+      "description": "",
+      "price": 0,
+      "picture": "",
+      "id": 2
+    },
+    {
+      "name": "sdfsdf",
+      "description": "sdffsd",
+      "price": null,
+      "picture": "sdffsd",
+      "id": 3
+    },
+    {
+      "name": "gfgssd",
+      "description": "gfsgd",
+      "price": null,
+      "picture": "sdfdssdf",
+      "id": 6
+    },
+    {
+      "name": "ddddddddddddddd",
+      "description": "dddddddddddd",
+      "price": 0,
+      "picture": "",
+      "id": 7
+    },
+    {
+      "name": "sddsds",
+      "description": "dssdds",
+      "price": null,
+      "picture": "dssdds",
+      "id": 8
+    }
   ]
 }

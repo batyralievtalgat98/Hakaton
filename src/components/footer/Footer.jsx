@@ -82,9 +82,9 @@ const Footer = () => {
                             
                             <Typography variant='h6'>PAYMENT METHODS</Typography>
                             <Grid py={3}>
-                                <img style={{marginRight: '15px', width: '100px', height: '60px'}} src="https://cdn.icon-icons.com/icons2/1316/PNG/128/if-visa-2593666_86609.png" alt="" />
-                                <img style={{marginRight: '15px', width: '100px', height: '60px'}} src="https://cdn.icon-icons.com/icons2/1178/PNG/128/mastercard_82049.png" alt="" />
-                                <img style={{marginRight: '15px', width: '100px', height: '100px'}} src="https://cdn-icons-png.flaticon.com/128/5968/5968279.png" alt="" />
+                                <img style={{marginRight: '15px', width: '80px', height: '40px'}} src="https://cdn.icon-icons.com/icons2/1316/PNG/128/if-visa-2593666_86609.png" alt="" />
+                                <img style={{marginRight: '15px', width: '80px', height: '40px'}} src="https://cdn.icon-icons.com/icons2/1178/PNG/128/mastercard_82049.png" alt="" />
+                                <img style={{marginRight: '15px', width: '80px', height: '65px'}} src="https://cdn-icons-png.flaticon.com/128/5968/5968279.png" alt="" />
                             
                             </Grid>
                         </Grid>

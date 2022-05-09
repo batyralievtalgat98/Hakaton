@@ -1,11 +1,205 @@
-import React from 'react';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import TextField from '@mui/material/TextField';
+
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
+
+import './navbar.css'
+   
+
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Badge } from '@mui/material';
+import { Favorite, Person, Search, ShoppingBag } from '@mui/icons-material';
+
+const pages = [
+  { name: 'Premium Collection', link: '/collection', id: 1 },
+  { name: 'Store', link: '/products', id: 2 },
+  { name: 'Partners', link: '/partners', id: 3 },
+  { name: 'Contacts', link: '/contacts', id: 4 },
+  { name: 'Admin panel', link: '/adminPage', id: 5 },
+];
+const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {
+
+
+
+
+  
+
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
   return (
-    <div>
-      
-    </div>
+    <AppBar position="static" elevation={1} sx={{background:'transparent'}} >
+      <Container maxWidth="xl" >
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            fontWeight={500}
+            noWrap
+            component="div"
+            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            color='black'
+          >
+            <Link to='/'>
+            FINEWINE.
+            </Link>
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+                color:'black',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            ><Box >
+                {pages.map((page) => (
+                  <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                    <Link to={page.link}>
+                      <Typography className='navbar-item' sx={{ ml: 'auto',my: 1, color: 'black', display: 'block',}}>{page.name}</Typography>
+                    </Link>
+                  </MenuItem>
+                ))}
+            </Box>
+            </Menu>
+          </Box>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            color='black'
+          >
+          FINEWINE.
+          </Typography>
+          <Box sx={{justifyContent: 'center', flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+            {pages.map((page) => (
+              <Link to={page.link} key={page.id}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ ml: 'auto',my: 2, color: 'black', display: 'block'}}
+                  className='navbar-item'
+                >
+                  {page.name}
+                </Button>
+              </Link>
+            ))}
+
+            
+          </Box>
+
+          <Box sx={{ flexGrow: 0}}>
+
+
+
+            <Tooltip title="Search" className='navbar-icon'>
+              <IconButton  sx={{ p: 0 }} >
+
+              {/* <TextField id="outlined-basic"  variant="outlined"  size="small" sx={{width: '10vw'}}/> */}
+
+                <Search/>
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="Favorites" className='navbar-icon'>
+              <IconButton  sx={{ p: 0 }}>
+                <Favorite/>
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="Cart" className='navbar-icon'>
+              <IconButton  sx={{ p: 0 }} >
+                <Badge badgeContent={4} color="error">
+                <ShoppingBag/>
+                </Badge>
+              </IconButton>
+            </Tooltip>
+
+       
+
+            
+            <Tooltip title="Open settings" className='navbar-icon'>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Person />
+              </IconButton>
+            </Tooltip>
+
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                  
+                </MenuItem>
+              ))}
+            </Menu>
+  
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
-
 export default Navbar;
