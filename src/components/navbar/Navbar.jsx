@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 
 import './navbar.css'
-
+   
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Badge } from '@mui/material';
@@ -26,6 +26,7 @@ const pages = [
   { name: 'Store', link: '/products', id: 2 },
   { name: 'Partners', link: '/partners', id: 3 },
   { name: 'Contacts', link: '/contacts', id: 4 },
+  { name: 'Admin panel', link: '/adminPage', id: 5 },
 ];
 const settings = ['Profile', 'Logout'];
 
@@ -66,7 +67,9 @@ const Navbar = () => {
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             color='black'
           >
-            FINEWINE.1
+            <Link to='/'>
+            FINEWINE.
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
