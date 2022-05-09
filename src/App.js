@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Footer from './components/footer/Footer';
 
 import Navbar from './components/navbar/Navbar';
 import CrudContextProvider from './contexts/CrudContextProvider';
@@ -9,8 +10,8 @@ function App() {
   return (
     <CrudContextProvider>
       <Navbar/>
-    <MainRoutes />
-
+      <MainRoutes />
+      <Footer />
     </CrudContextProvider>
   );
 }
