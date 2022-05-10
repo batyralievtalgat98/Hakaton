@@ -34,6 +34,13 @@
       "price": "456456",
       "picture": "https://cdn.create.vista.com/api/media/small/153530986/stock-photo-young-woman-with-a-glass",
       "id": 8
+    },
+    {
+      "name": "test",
+      "description": "test",
+      "price": 12345,
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo_IONkc0F79K_4mgKXIbg9ukL8gf_uvntbtwMymSS1A&s",
+      "id": 9
     }
   ]
 }
