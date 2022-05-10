@@ -22,6 +22,7 @@ const ProductList = () => {
     sx={{
       display: 'flex',
       flexWrap: 'wrap',
+      my: '35px'
     }}
   >
     {products ? (
