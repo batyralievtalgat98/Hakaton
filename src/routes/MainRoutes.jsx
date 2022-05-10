@@ -3,6 +3,8 @@ import EditProductPage from "../pages/EditProductPage";
 import { Navigate, Route, Routes } from 'react-router-dom';
 import ProductList from "../components/crud/ProductList";
 import HomePage from "../pages/HomePage";
+import Cart from "../components/Cart/Cart";
+
 import AuthPage from "../pages/AuthPage";
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
@@ -29,9 +31,15 @@ const MainRoutes = () => {
       id: 3,
     },
     {
+      link: '/cart',
+      element: <Cart />,
+      id: 4,
+    },
+    {
       link: '*',
       element: <NotFoundPage />,
-      id: 4,
+      id: 5,
+
     },
   ];
 

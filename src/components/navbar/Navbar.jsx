@@ -17,9 +17,13 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link, useNavigate } from 'react-router-dom';
 
 import './navbar.css'
+
+
+
+import { getCountProductsInCart } from '../../helpers/functions';
+import { useCart } from '../../contexts/CartContextProvider';
    
 
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Badge, InputAdornment } from '@mui/material';
 import { Favorite, Person, Search, ShoppingBag } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContextProvider';
@@ -41,16 +45,20 @@ const Navbar = () => {
   } = useAuth();
 
 
+
   const navigate = useNavigate()
   
 
 
-
-
-  
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const {addProductToCart} = useCart()
+  const [count, setCount] = React.useState(0)
+
+  React.useEffect (()=> {
+    setCount(getCountProductsInCart)
+  },[addProductToCart])
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -147,7 +155,11 @@ const Navbar = () => {
             ))}
 
 {email == ADMIN ? (
-              <Link to="/admin">
+
+              <Link to="/adminPage">
+
+          
+
                 <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
               </Link>
             ) : (
@@ -184,13 +196,15 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
 
+          <Link to='/cart'>
             <Tooltip title="Cart" className='navbar-icon'>
               <IconButton  sx={{ p: 0 }} >
-                <Badge badgeContent={4} color="error">
-                <ShoppingBag/>
+                <Badge badgeContent={count} color="error">
+                <ShoppingBag />
                 </Badge>
               </IconButton>
             </Tooltip>
+            </Link>
 
        
 
