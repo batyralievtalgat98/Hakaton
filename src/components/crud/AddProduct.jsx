@@ -44,8 +44,6 @@ const AddProduct = () => {
         variant="outlined"
         name='name'
         size="small"
-        
-
         onChange={handleInp}
       />
       <TextField
