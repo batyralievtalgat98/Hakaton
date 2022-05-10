@@ -16,7 +16,7 @@ const ProductCard = ({item}) => {
   const navigate = useNavigate();
   return (
     <div>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 145, margin:'20px' , minHeight:350}}>
       <CardMedia
         component="img"
         height="140"
@@ -29,6 +29,10 @@ const ProductCard = ({item}) => {
         </Typography>
         <Typography variant="body2" color="text.secondary">
          {item.description}
+        </Typography>
+        <Typography variant="body2" 
+        sx={{color: 'black', fontWeight: 'bold'}}>
+         {item.price} $
         </Typography>
       </CardContent>
       <CardActions>
