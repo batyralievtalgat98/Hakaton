@@ -3,6 +3,7 @@ import EditProductPage from "../pages/EditProductPage";
 import { Route, Routes } from 'react-router-dom';
 import ProductList from "../components/crud/ProductList";
 import HomePage from "../pages/HomePage";
+import Cart from "../components/Cart/Cart";
 
 
 const MainRoutes = () => {
@@ -24,6 +25,11 @@ const MainRoutes = () => {
     {
       link: '/',
       element: <HomePage />,
+      id: 3,
+    },
+    {
+      link: '/cart',
+      element: <Cart />,
       id: 3,
     }
   ];

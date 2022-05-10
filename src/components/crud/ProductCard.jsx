@@ -9,14 +9,21 @@ import Typography from '@mui/material/Typography';
 import { useProducts } from '../../contexts/CrudContextProvider';
 import { useNavigate } from 'react-router-dom';
 
+import  ShoppingBag  from '@mui/icons-material/ShoppingBag';
+import { IconButton } from '@mui/material';
+import { useCart } from '../../contexts/CartContextProvider';
+
+
+
 
 const ProductCard = ({item}) => {
-  const { deleteProduct } = useProducts();
-
   const navigate = useNavigate();
+  const { deleteProduct } = useProducts();
+  const { addProductToCart, checkProductInCart } = useCart()
+
   return (
     <div>
-        <Card sx={{ maxWidth: 145, margin:'20px' , minHeight:350}}>
+        <Card sx={{ maxWidth: 200, margin:'20px' , minHeight:350}}>
       <CardMedia
         component="img"
         height="140"
@@ -38,6 +45,12 @@ const ProductCard = ({item}) => {
       <CardActions>
         <Button size="small" onClick={()=>deleteProduct(item.id)}>Delete</Button>
         <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
+        
+        <IconButton onClick={() => addProductToCart(item)}>
+          <ShoppingBag
+            color={checkProductInCart(item.id) ? 'warning' : ''}
+          />
+          </IconButton>
       </CardActions>
     </Card>
     </div>

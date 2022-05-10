@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import TextField from '@mui/material/TextField';
 
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
@@ -15,11 +14,11 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 
 import './navbar.css'
-   
-
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingBag  from '@mui/icons-material/ShoppingBag'
 import { Badge } from '@mui/material';
-import { Favorite, Person, Search, ShoppingBag } from '@mui/icons-material';
+import { Favorite, Person, Search } from '@mui/icons-material';
+import { getCountProductsInCart } from '../../helpers/functions';
+import { useCart } from '../../contexts/CartContextProvider';
 
 const pages = [
   { name: 'Premium Collection', link: '/collection', id: 1 },
@@ -33,12 +32,15 @@ const settings = ['Profile', 'Logout'];
 const Navbar = () => {
 
 
-
-
-  
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const {addProductToCart} = useCart()
+  const [count, setCount] = React.useState(0)
+
+  React.useEffect (()=> {
+    setCount(getCountProductsInCart)
+  },[addProductToCart])
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -143,7 +145,7 @@ const Navbar = () => {
             <Tooltip title="Search" className='navbar-icon'>
               <IconButton  sx={{ p: 0 }} >
 
-              {/* <TextField id="outlined-basic"  variant="outlined"  size="small" sx={{width: '10vw'}}/> */}
+              
 
                 <Search/>
               </IconButton>
@@ -155,13 +157,15 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
 
+          <Link to='/cart'>
             <Tooltip title="Cart" className='navbar-icon'>
               <IconButton  sx={{ p: 0 }} >
-                <Badge badgeContent={4} color="error">
-                <ShoppingBag/>
+                <Badge badgeContent={count} color="error">
+                <ShoppingBag />
                 </Badge>
               </IconButton>
             </Tooltip>
+            </Link>
 
        
 
