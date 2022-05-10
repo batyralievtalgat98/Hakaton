@@ -24,7 +24,6 @@ import { getCountProductsInCart } from '../../helpers/functions';
 import { useCart } from '../../contexts/CartContextProvider';
    
 
-
 import { Badge, InputAdornment } from '@mui/material';
 import { Favorite, Person, Search, ShoppingBag } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContextProvider';
@@ -44,6 +43,7 @@ const Navbar = () => {
     handleLogout,
     user: { email },
   } = useAuth();
+
 
 
   const navigate = useNavigate()
@@ -155,7 +155,11 @@ const Navbar = () => {
             ))}
 
 {email == ADMIN ? (
+
               <Link to="/adminPage">
+
+          
+
                 <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
               </Link>
             ) : (
