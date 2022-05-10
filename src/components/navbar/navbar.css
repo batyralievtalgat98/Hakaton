@@ -2,8 +2,20 @@
   margin-right: 10px !important;
 }
 
- 
 
 .navbar-item:hover{
   color: #c84648
+}
+
+
+
+.logo {
+  color: black !important;
+}
+
+.textfield__label {
+  color: #c84648 !important;
+  border: #c84648;
+  
+
 }
