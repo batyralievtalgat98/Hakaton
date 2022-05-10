@@ -12,14 +12,15 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './navbar.css'
    
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Badge } from '@mui/material';
+import { Badge, InputAdornment } from '@mui/material';
 import { Favorite, Person, Search, ShoppingBag } from '@mui/icons-material';
+import { useAuth } from '../../contexts/AuthContextProvider';
 
 const pages = [
   { name: 'Premium Collection', link: '/collection', id: 1 },
@@ -28,9 +29,18 @@ const pages = [
   { name: 'Contacts', link: '/contacts', id: 4 },
   { name: 'Admin panel', link: '/adminPage', id: 5 },
 ];
-const settings = ['Profile', 'Logout'];
+// const settings = ['Logout'];
 
 const Navbar = () => {
+
+  const {
+    handleLogout,
+    user: { email },
+  } = useAuth();
+
+
+  const navigate = useNavigate()
+  
 
 
 
@@ -65,9 +75,10 @@ const Navbar = () => {
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-            color='black'
+            color='pink'
           >
-            <Link to='/'>
+            <Link to='/' className='logo'
+>
             FINEWINE.
             </Link>
           </Typography>
@@ -140,14 +151,23 @@ const Navbar = () => {
 
 
 
-            <Tooltip title="Search" className='navbar-icon'>
-              <IconButton  sx={{ p: 0 }} >
+           
 
-              {/* <TextField id="outlined-basic"  variant="outlined"  size="small" sx={{width: '10vw'}}/> */}
+              <TextField 
+                            InputLabelProps={{className: 'textfield__label'}}
 
-                <Search/>
-              </IconButton>
-            </Tooltip>
+        id="input-with-icon-textfield"
+        sx={{maxWidth:'10vw',marginRight:'1em'}}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <Search />
+            </InputAdornment>
+          ),
+        }}
+        variant="standard"
+      />
+          
 
             <Tooltip title="Favorites" className='navbar-icon'>
               <IconButton  sx={{ p: 0 }}>
@@ -188,12 +208,34 @@ const Navbar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+
+
+              {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center" onClick={handleLogout}>{setting}</Typography>
                   
                 </MenuItem>
-              ))}
+
+                
+              ))} */}
+
+
+              <MenuItem>
+              <Link to='/auth'>
+              <Typography>
+                Login
+              </Typography>
+              </Link>
+              </MenuItem>
+
+
+              <MenuItem>
+              <Typography onClick={handleLogout}>
+                Logout
+              </Typography>
+              </MenuItem>
+
+
             </Menu>
   
           </Box>
