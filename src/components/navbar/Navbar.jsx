@@ -8,6 +8,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
+import { ADMIN } from '../../helpers/consts';
+
 
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
@@ -27,7 +29,7 @@ const pages = [
   { name: 'Store', link: '/products', id: 2 },
   { name: 'Partners', link: '/partners', id: 3 },
   { name: 'Contacts', link: '/contacts', id: 4 },
-  { name: 'Admin panel', link: '/adminPage', id: 5 },
+  // { name: 'Admin panel', link: '/adminPage', id: 5 },
 ];
 // const settings = ['Logout'];
 
@@ -144,6 +146,13 @@ const Navbar = () => {
               </Link>
             ))}
 
+{email == ADMIN ? (
+              <Link to="/admin">
+                <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
+              </Link>
+            ) : (
+              <></>)}
+
             
           </Box>
 
@@ -220,20 +229,23 @@ const Navbar = () => {
               ))} */}
 
 
-              <MenuItem>
+              {email ? (<MenuItem>
+              <Typography onClick={handleLogout}>
+                Logout
+              </Typography>
+              </MenuItem>) : ( <MenuItem>
               <Link to='/auth'>
               <Typography>
                 Login
               </Typography>
               </Link>
-              </MenuItem>
+              </MenuItem>)}
 
 
-              <MenuItem>
-              <Typography onClick={handleLogout}>
-                Logout
-              </Typography>
-              </MenuItem>
+             
+
+
+              
 
 
             </Menu>
