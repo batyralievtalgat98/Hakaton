@@ -14,7 +14,7 @@ import { ADMIN } from '../../helpers/consts';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 import './navbar.css'
 
@@ -74,6 +74,15 @@ const Navbar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = React.useState(searchParams.get('q') || '');
+
+  React.useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+  }, [search]);
 
   return (
     <AppBar position="static" elevation={1} sx={{background:'transparent'}} >
@@ -175,8 +184,10 @@ const Navbar = () => {
            
 
               <TextField 
-                            InputLabelProps={{className: 'textfield__label'}}
-
+              value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        InputLabelProps={{className: 'textfield__label'}}
+        
         id="input-with-icon-textfield"
         sx={{maxWidth:'10vw',marginRight:'1em'}}
         InputProps={{
