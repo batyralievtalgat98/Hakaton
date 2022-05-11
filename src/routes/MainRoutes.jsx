@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import ProductList from "../components/crud/ProductList";
 import HomePage from "../pages/HomePage";
 import Cart from "../components/Cart/Cart";
+
 import AuthPage from "../pages/AuthPage";
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
@@ -38,6 +39,7 @@ const MainRoutes = () => {
       link: '*',
       element: <NotFoundPage />,
       id: 5,
+
     },
   ];
 

@@ -36,32 +36,11 @@
       "id": 8
     },
     {
-      "name": "цуке",
-      "description": "йцук",
-      "price": 1243,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkiT-yyLmJNm-LFIkIuz04Wd-sOUYRrpt-bQ&usqp=CAU",
+      "name": "test",
+      "description": "test",
+      "price": 12345,
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo_IONkc0F79K_4mgKXIbg9ukL8gf_uvntbtwMymSS1A&s",
       "id": 9
-    },
-    {
-      "name": "ыфв",
-      "description": "ыфвап",
-      "price": 3212,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjsBbs3Ep5NYTMtKVUIPObrXhWkZ2sw583UA&usqp=CAU",
-      "id": 10
-    },
-    {
-      "name": "цукен",
-      "description": "321йцу",
-      "price": 32,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBaaNXbsqp1x-EMBwiIj6T_1yQULuV7m6vw&usqp=CAU",
-      "id": 11
-    },
-    {
-      "name": "уцке",
-      "description": "репку",
-      "price": 1234,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA2eVTQQrLcDkGCv0oijpgJ8ByIfDylBukQw&usqp=CAU",
-      "id": 12
     }
   ]
 }

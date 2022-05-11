@@ -10,7 +10,8 @@ import { useSearchParams } from 'react-router-dom';
 
 const ProductList = () => {
   const { products, getProducts } = useProducts();
-  const {searchParams, setSearchParams} = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams();
+
 
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const ProductList = () => {
   useEffect(() => {
     getProducts()
     setPage(1)
-  }, [])
+  }, [searchParams])
 
   const [page, setPage] = useState(1)
   const itemsPerPage = 6
@@ -36,6 +37,7 @@ const ProductList = () => {
     return products.slice(begin, end)
 
   }
+  
 
 
 
