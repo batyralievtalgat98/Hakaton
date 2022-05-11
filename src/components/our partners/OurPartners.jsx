@@ -51,15 +51,9 @@ const OurPartners = () => {
 
 <Grid container spacing={2} sx={{ maxWidth: '1100px', alignItems: 'center' }} className='OurPartners'>
 
-<<<<<<< HEAD
-   {itemData.map((item, index) => (
-     <Grid item md={3} xs={12} sm={6} p={2} key={index}>
-       <Box sx={{display: { xs:'block', sm: 'flex' }}} >
-=======
    {itemData.map((item) => (
      <Grid  md={3} xs={12} sm={6}  >
        <Box sx={{display: { xs:'block', sm: 'flex' }}}   className='imageOurPartners' >
->>>>>>> b5d3e923c5a7761a12f09da170e9b8b3e24ceb64
     <img 
   
     src={`${item.img}`}
