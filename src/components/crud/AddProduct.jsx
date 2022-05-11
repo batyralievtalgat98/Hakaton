@@ -13,6 +13,7 @@ const AddProduct = () => {
     description: '',
     price: 0,
     picture: '',
+    type:''
   })
 
 
@@ -76,6 +77,18 @@ const AddProduct = () => {
         label="Picture"
         variant="outlined"
         name='picture'
+        size="small"
+
+        onChange={handleInp}
+      />
+            <TextField
+      
+      sx={{marginBottom: '10px', borderColor: 'black',backgroundColor: 'whitesmoke' }}
+        fullWidth
+        id="outlined-basic"
+        label="Type"
+        variant="outlined"
+        name='type'
         size="small"
 
         onChange={handleInp}

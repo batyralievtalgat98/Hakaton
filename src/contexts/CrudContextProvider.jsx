@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useReducer } from 'react';
+ import React, { createContext, useContext, useReducer } from 'react';
 
 import axios from 'axios'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -27,6 +28,9 @@ const reducer = (state = INIT_STATE, action) => {
 }
 
 const CrudContextProvider = ({ children }) => {
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
@@ -69,6 +73,21 @@ const CrudContextProvider = ({ children }) => {
     console.log(465456);
   }
 
+  const fetchByParams = async (query, value) => {
+    const search = new URLSearchParams(location.search);
+
+    if (value === 'all') {
+      search.delete(query);
+    } else {
+      search.set(query, value);
+    }
+    const url = `${location.pathname}?${search.toString()}`;
+    console.log(search.toString());
+    console.log(url);
+    navigate(url);
+  };
+
+
 
   return <productContext.Provider value={{
     products: state.products,
@@ -78,6 +97,7 @@ const CrudContextProvider = ({ children }) => {
     deleteProduct,
     getProductDetails,
     saveEditedProduct,
+    fetchByParams,
 
   }}
   >{children}</productContext.Provider>

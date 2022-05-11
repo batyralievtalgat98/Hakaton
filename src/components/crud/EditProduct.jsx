@@ -72,6 +72,15 @@ const EditProduct = () => {
       value={product.picture || ''}
       onChange={handleInp}
     />
+        <TextField
+      fullWidth
+      id="outlined-basic"
+      label="Type"
+      variant="outlined"
+      name="type"
+      value={product.type || ''}
+      onChange={handleInp}
+    />
 
     <Button
       variant="outlined"
