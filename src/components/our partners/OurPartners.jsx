@@ -1,6 +1,7 @@
 import { Grid, ImageList, ImageListItem, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
+import  "./OurPartners.css";
 
 const OurPartners = () => {
 
@@ -42,18 +43,19 @@ const OurPartners = () => {
       
  
   return (
-    <div>
+    <Box my={2} >
 
 
 
       <Typography variant="h3" sx={{textAlign: 'center', fontWeight: 'bold'}} >OUR<br/> PARTNERS</Typography>
 
-<Grid container spacing={2} sx={{margin: '20px auto', maxWidth: '1100px'}}>
+<Grid container spacing={2} sx={{ maxWidth: '1100px', alignItems: 'center' }} className='OurPartners'>
 
    {itemData.map((item) => (
-     <Grid  md={3} xs={12} sm={6} p={2} >
-       <Box sx={{display: { xs:'block', sm: 'flex' }}} >
+     <Grid  md={3} xs={12} sm={6}  >
+       <Box sx={{display: { xs:'block', sm: 'flex' }}}   className='imageOurPartners' >
     <img 
+  
     src={`${item.img}`}
     srcSet={`${item.img}`}
     alt={item.title}
@@ -68,7 +70,7 @@ const OurPartners = () => {
     ))}
 
 </Grid>   
-    </div>
+    </Box>
   );
 };
 export default OurPartners;

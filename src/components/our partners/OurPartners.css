@@ -1,0 +1,9 @@
+.imageOurPartners{
+  display: flex !important;
+  justify-content: center;
+}
+
+.OurPartners{
+
+  padding: 0 auto !important
+}
