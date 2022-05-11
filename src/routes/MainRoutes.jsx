@@ -9,6 +9,7 @@ import AuthPage from "../pages/AuthPage";
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
 import NotFoundPage from "../pages/NotFoundPage";
+import PaymentPage from "../pages/PaymenPage";
 
 
 const MainRoutes = () => {
@@ -39,7 +40,11 @@ const MainRoutes = () => {
       link: '*',
       element: <NotFoundPage />,
       id: 5,
-
+    },
+    {
+      link: '/payment',
+      element: <PaymentPage />,
+      id: 5,
     },
   ];
 

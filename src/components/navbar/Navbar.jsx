@@ -22,7 +22,6 @@ import './navbar.css'
 
 import { getCountProductsInCart } from '../../helpers/functions';
 import { useCart } from '../../contexts/CartContextProvider';
-   
 
 import { Badge, InputAdornment } from '@mui/material';
 import { Favorite, Person, Search, ShoppingBag } from '@mui/icons-material';
@@ -179,9 +178,6 @@ const Navbar = () => {
 
           <Box sx={{ flexGrow: 0}}>
 
-
-
-           
 
               <TextField 
               value={search}
