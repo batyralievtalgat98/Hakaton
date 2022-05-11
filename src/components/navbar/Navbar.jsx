@@ -179,7 +179,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0}}>
 
 
-              <TextField 
+              {/* <TextField 
               value={search}
           onChange={(e) => setSearch(e.target.value)}
         InputLabelProps={{className: 'textfield__label'}}
@@ -194,7 +194,7 @@ const Navbar = () => {
           ),
         }}
         variant="standard"
-      />
+      /> */}
           
 
             <Tooltip title="Favorites" className='navbar-icon'>
