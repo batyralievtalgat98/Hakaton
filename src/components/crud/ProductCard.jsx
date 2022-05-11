@@ -12,6 +12,8 @@ import { useNavigate } from 'react-router-dom';
 import  ShoppingBag  from '@mui/icons-material/ShoppingBag';
 import { IconButton } from '@mui/material';
 import { useCart } from '../../contexts/CartContextProvider';
+import { ADMIN } from '../../helpers/consts';
+import { useAuth } from '../../contexts/AuthContextProvider';
 
 
 
@@ -20,6 +22,11 @@ const ProductCard = ({item}) => {
   const navigate = useNavigate();
   const { deleteProduct } = useProducts();
   const { addProductToCart, checkProductInCart } = useCart()
+
+  const {
+    handleLogout,
+    user: { email },
+  } = useAuth();
 
   return (
     <div>
@@ -43,14 +50,16 @@ const ProductCard = ({item}) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={()=>deleteProduct(item.id)}>Delete</Button>
+
+        {email === ADMIN ? (<><Button size="small" onClick={()=>deleteProduct(item.id)}>Delete</Button>
         <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
-        
-        <IconButton onClick={() => addProductToCart(item)}>
+        </>) : ( <IconButton onClick={() => addProductToCart(item)}>
           <ShoppingBag
             color={checkProductInCart(item.id) ? 'warning' : ''}
           />
-          </IconButton>
+          </IconButton>)}
+        
+       
       </CardActions>
     </Card>
     </div>

@@ -9,7 +9,7 @@ import AuthPage from "../pages/AuthPage";
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
 import NotFoundPage from "../pages/NotFoundPage";
-import PaymentPage from "../pages/PaymenPage";
+import PaymentPage from "../pages/PaymentPage";
 
 
 const MainRoutes = () => {
