@@ -10,20 +10,18 @@ const NotFoundPage = () => {
       404 PAGE NOT FOUND BYE BYE
         </Typography>
         
-
-      <ImageList sx={{ width: '180%', height: '180%', mt: '20px', mb: '50px', ml: '60px'}} >
-  
-    <ImageListItem key=''>
-    <Link to='/'>
-      <Button>Back to home</Button>
+        <Link to='/'>
+      <Button sx={{alignSelf: 'center', border: '1px solid blue'}}>Back to home</Button>
       </Link>
-      <img src='https://c.tenor.com/eCRrEqQIu4wAAAAC/john-travolta-vincent-vega.gif'
-        alt=''
-        loading="lazy"
+  
+    
+      
+      <img width='100%' src='https://c.tenor.com/eCRrEqQIu4wAAAAC/john-travolta-vincent-vega.gif'
+  
       />
       
-    </ImageListItem>
-  </ImageList>
+      
+    
 </Grid>
     </Box>
   );

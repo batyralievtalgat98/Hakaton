@@ -50,7 +50,7 @@ export default function Cart() {
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table sx={{ minWidth: 700}} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Picture</StyledTableCell>
