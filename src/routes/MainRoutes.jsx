@@ -44,7 +44,7 @@ const MainRoutes = () => {
     {
       link: '/payment',
       element: <PaymentPage />,
-      id: 5,
+      id: 6,
     },
   ];
 

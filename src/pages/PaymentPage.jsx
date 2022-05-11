@@ -1,9 +1,12 @@
 import React from 'react';
+import PaymentForm from '../components/payment/PaymentForm';
+import './payment.css'
 
 const PaymentPage = () => {
   return (
-    <div>
+    <div className='payment' id='paymentt'>
       Payment Page
+      <PaymentForm/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Grid, ImageList, ImageListItem, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 
@@ -50,8 +50,8 @@ const OurPartners = () => {
 
 <Grid container spacing={2} sx={{margin: '20px auto', maxWidth: '1100px'}}>
 
-   {itemData.map((item) => (
-     <Grid  md={3} xs={12} sm={6} p={2} >
+   {itemData.map((item, index) => (
+     <Grid item md={3} xs={12} sm={6} p={2} key={index}>
        <Box sx={{display: { xs:'block', sm: 'flex' }}} >
     <img 
     src={`${item.img}`}
@@ -61,6 +61,7 @@ const OurPartners = () => {
     width={250}
     height={150}
     align='center'
+    
 
     />
     </Box>
