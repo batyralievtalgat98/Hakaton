@@ -49,7 +49,7 @@ const OurPartners = () => {
 
       <Typography variant="h3" sx={{textAlign: 'center', fontWeight: 'bold'}} >OUR<br/> PARTNERS</Typography>
 
-<Grid container spacing={2} sx={{ maxWidth: '1100px', alignItems: 'center' }} className='OurPartners'>
+<Grid container sx={{ maxWidth: '1100px', alignItems: 'center' }} className='OurPartners'>
 
    {itemData.map((item) => (
      <Grid  md={3} xs={12} sm={6}  >
