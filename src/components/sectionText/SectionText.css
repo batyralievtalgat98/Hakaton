@@ -1,0 +1,60 @@
+.sectionText{
+  font-size: 2em;
+width: 500px;
+margin: 30px auto;
+
+text-align: center;
+padding: 0 10px;
+}
+.sectionTextBlock{
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 700px;
+  font-size: 1.3em;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.sectionTextOne{
+width: 250px;
+margin-top: 20px;
+}
+
+.sectionTextTwo{
+  width: 250px;
+  margin-top: 20px;
+}
+
+@media (max-width: 757px) { 
+  .sectionTextBlock{
+
+    width: 100%;
+    font-size: 20px;
+
+  }
+  .sectionTextOne{
+    margin-right: 20px;
+    }
+
+
+ }
+
+ @media (max-width: 510px) { 
+  .sectionText{
+    font-size: 1.5em;
+  width: 100%;
+  margin: 30px auto;
+  }
+
+  .sectionTextOne{
+
+    width: 100%;
+    }
+
+    .sectionTextTwo{
+      width: 100%;
+
+    }
+
+ }

@@ -1,7 +1,6 @@
 import AdminPages from "../pages/AdminPages";
 import EditProductPage from "../pages/EditProductPage";
 import { Navigate, Route, Routes } from 'react-router-dom';
-import ProductList from "../components/crud/ProductList";
 import HomePage from "../pages/HomePage";
 import Cart from "../components/Cart/Cart";
 
@@ -9,6 +8,8 @@ import AuthPage from "../pages/AuthPage";
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
 import NotFoundPage from "../pages/NotFoundPage";
+import PaymentPage from "../pages/PaymentPage";
+import ProductsPage from "../pages/ProductsPage";
 
 
 const MainRoutes = () => {
@@ -17,7 +18,7 @@ const MainRoutes = () => {
 
     {
       link: '/products',
-      element: <ProductList />,
+      element: <ProductsPage />,
       id: 1,
     },
     {
@@ -39,7 +40,11 @@ const MainRoutes = () => {
       link: '*',
       element: <NotFoundPage />,
       id: 5,
-
+    },
+    {
+      link: '/payment',
+      element: <PaymentPage />,
+      id: 6,
     },
   ];
 
