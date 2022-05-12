@@ -23,7 +23,7 @@ const WineImage = () => {
   return (
     <div>
       <h2 className='wineText'>DISCOVER <br/>NEW FEELING</h2>
-      <Box className='wineblock' sx={{display:'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+      <Box className='wineblock' sx={{display:'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
         <div className='wine wineblock1_1'>
           <img src="https://images.pexels.com/photos/66636/pexels-photo-66636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
           <h4> BEST OFFERS</h4>

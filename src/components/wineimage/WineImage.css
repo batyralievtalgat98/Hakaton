@@ -22,3 +22,7 @@
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%
 }
+
+.wine p {
+margin-bottom: 10px;
+}
