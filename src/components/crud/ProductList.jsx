@@ -26,7 +26,7 @@ const ProductList = () => {
   }, [searchParams])
 
   const [page, setPage] = useState(1)
-  const itemsPerPage = 6
+  const itemsPerPage = 15
   const count = Math.ceil(products.length / itemsPerPage)
 
   const handleChange = (e,p) =>{
