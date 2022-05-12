@@ -8,7 +8,11 @@ import { Box, Pagination, Typography } from '@mui/material';
 import ProductCard from './ProductCard';
 import { useSearchParams } from 'react-router-dom';
 
+
 const ProductList = () => {
+
+
+
   const { products, getProducts } = useProducts();
   const [searchParams] = useSearchParams();
 
@@ -53,9 +57,10 @@ const ProductList = () => {
     }}
   >
     {products ? (
-      currentData().map((item) => (
-        <ProductCard item={item} key={item.id} />
-      ))
+      currentData().map((item) => {
+          
+         return <ProductCard item={item} key={item.id} />
+})
     ) : (
       <h2>Loading...</h2>
     )}
