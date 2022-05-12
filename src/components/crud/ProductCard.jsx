@@ -30,7 +30,7 @@ const ProductCard = ({item}) => {
 
   return (
     <div>
-        <Card sx={{  minHeight:350, minWidth: 220}}>
+        <Card sx={{  minHeight:350, minWidth: 220, my: 5}}>
       <CardMedia
       sx={{width: '67%'}}
         component="img"

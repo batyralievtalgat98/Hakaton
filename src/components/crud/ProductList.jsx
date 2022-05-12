@@ -49,7 +49,9 @@ const ProductList = () => {
     sx={{
       display: 'flex',
       flexWrap: 'wrap',
-      my: '35px'
+      my: '35px',
+      justifyContent: 'space-evenly'
+
     }}
   >
     {products ? (
