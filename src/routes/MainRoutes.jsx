@@ -10,6 +10,7 @@ import { ADMIN } from '../helpers/consts';
 import NotFoundPage from "../pages/NotFoundPage";
 import PaymentPage from "../pages/PaymentPage";
 import ProductsPage from "../pages/ProductsPage";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
 
 
 const MainRoutes = () => {
@@ -45,6 +46,11 @@ const MainRoutes = () => {
       link: '/payment',
       element: <PaymentPage />,
       id: 6,
+    },
+    {
+      link: '/products/:id',
+      element: <ProductDetailsPage />,
+      id: 7,
     },
   ];
 

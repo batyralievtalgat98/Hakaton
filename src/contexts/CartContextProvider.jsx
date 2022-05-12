@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer, useState } from 'react';
 import { CART } from '../helpers/consts';
 import { calcTotalPrice, getCountProductsInCart, calcSubPrice,} from '../helpers/functions';
 
@@ -38,6 +38,9 @@ function checkProductInCart(id) {
 }
 
 const CartContextProvider = ({ children }) => {
+
+
+ 
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const getCart = () => {
@@ -153,6 +156,8 @@ const CartContextProvider = ({ children }) => {
         checkProductInCart,
         deleteCartProduct,
         cart: state.cart,
+      
+
       }}
     >
       {children}

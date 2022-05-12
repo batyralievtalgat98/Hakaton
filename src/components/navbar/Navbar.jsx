@@ -84,7 +84,7 @@ const Navbar = () => {
   }, [search]);
 
   return (
-    <AppBar position="static" elevation={1} sx={{background:'transparent'}} >
+    <AppBar position="static" elevation={0} sx={{background:'transparent'}} >
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           <Typography

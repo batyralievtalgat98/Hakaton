@@ -63,9 +63,9 @@ const SideBar = () => {
             />
 
             <FormControlLabel
-              value="rose "
+              value="rose"
               control={<Radio color="error" />}
-              label="rose "
+              label="rose"
               
             />
           </RadioGroup>

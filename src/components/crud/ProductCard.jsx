@@ -14,6 +14,7 @@ import { IconButton } from '@mui/material';
 import { useCart } from '../../contexts/CartContextProvider';
 import { ADMIN } from '../../helpers/consts';
 import { useAuth } from '../../contexts/AuthContextProvider';
+import { MoreHoriz } from '@mui/icons-material';
 
 
 
@@ -22,6 +23,7 @@ const ProductCard = ({item}) => {
   const navigate = useNavigate();
   const { deleteProduct } = useProducts();
   const { addProductToCart, checkProductInCart } = useCart()
+
 
   const {
     handleLogout,
@@ -54,11 +56,19 @@ const ProductCard = ({item}) => {
 
         {email === ADMIN ? (<><Button size="small" onClick={()=>deleteProduct(item.id)}>Delete</Button>
         <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
-        </>) : ( <IconButton onClick={() => addProductToCart(item)}>
+        </>) : ( <> <IconButton onClick={() => addProductToCart(item)}>
           <ShoppingBag
             color={checkProductInCart(item.id) ? 'warning' : ''}
           />
-          </IconButton>)}
+          </IconButton>
+
+          <IconButton onClick={() => navigate(`/products/${item.id}`)}>
+          <MoreHoriz/>
+          </IconButton>
+
+          </>
+          
+          )}
         
        
       </CardActions>
