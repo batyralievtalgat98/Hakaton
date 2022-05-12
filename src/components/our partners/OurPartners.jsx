@@ -43,7 +43,7 @@ const OurPartners = () => {
       
  
   return (
-    <Box my={2} >
+    <Box my={2} id='ourpartners' >
 
 
 
