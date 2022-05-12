@@ -1,25 +1,60 @@
 {
   "products": [
     {
-      "name": "ddddddddddddddd",
-      "description": "dddddddddddd",
-      "price": "654213",
-      "picture": "https://cdn.create.vista.com/api/media/small/147244999/stock-photo-admirable-female-holding-her-knees",
+      "name": "654fd",
+      "description": "54",
+      "price": 654564,
+      "picture": "654654",
+      "type": "red",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 560,
+      "picture": "",
+      "type": "white",
+      "id": 5
+    },
+    {
+      "name": "ewr",
+      "description": "wer",
+      "price": 1150,
+      "picture": "ert",
+      "type": "rose",
+      "id": 6
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 654321,
+      "picture": "",
+      "type": "red",
       "id": 7
     },
     {
-      "name": "sddsds",
-      "description": "dssdds",
-      "price": "456456",
-      "picture": "https://cdn.create.vista.com/api/media/small/153530986/stock-photo-young-woman-with-a-glass",
+      "name": "dsfgdfs",
+      "description": "dsfdsf",
+      "price": 465,
+      "picture": "https://cdnimg.rg.ru/img/content/146/91/37/googletranslate-1000_d_850.jpg",
+      "type": "red",
       "id": 8
     },
     {
-      "name": "test",
-      "description": "test",
-      "price": 12345,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo_IONkc0F79K_4mgKXIbg9ukL8gf_uvntbtwMymSS1A&s",
+      "name": "dggsdg",
+      "description": "gfsgs",
+      "price": null,
+      "picture": "",
+      "type": "",
       "id": 9
+    },
+    {
+      "name": "dgsg",
+      "description": "fgfgf",
+      "price": null,
+      "picture": "dsdsggf",
+      "type": "gfdsg",
+      "id": 10
     }
   ]
 }

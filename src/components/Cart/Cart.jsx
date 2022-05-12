@@ -8,7 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useCart } from '../../contexts/CartContextProvider';
-import { Box, Button, IconButton } from '@mui/material';
+import { Box, Button, Grid, IconButton, Typography } from '@mui/material';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 
@@ -49,20 +49,21 @@ export default function Cart() {
   };
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700}} aria-label="customized table">
-        <TableHead>
+    <TableContainer component={Paper} sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+      <Table  sx={{width: '700px'}} 
+        aria-label="customized table">
+        
           <TableRow>
             <StyledTableCell>Picture</StyledTableCell>
             <StyledTableCell align="right">Name</StyledTableCell>
             <StyledTableCell align="right">Type</StyledTableCell>
-            <StyledTableCell align="right">Description</StyledTableCell>
+
             <StyledTableCell align="right">Price</StyledTableCell>
             <StyledTableCell align="right">Count</StyledTableCell>
             <StyledTableCell align="right">SubPrice</StyledTableCell>
-            <StyledTableCell align="right">-</StyledTableCell>
+            
           </TableRow>
-        </TableHead>
+        
         <TableBody>
           {cart?.products.map((row) => (
             <StyledTableRow key={row.item.id}>
@@ -71,9 +72,7 @@ export default function Cart() {
               </StyledTableCell>
               <StyledTableCell align="right">{row.item.name}</StyledTableCell>
               <StyledTableCell align="right">{row.item.type}</StyledTableCell>
-              <StyledTableCell align="right">
-                {row.item.description}
-              </StyledTableCell>
+
               <StyledTableCell align="right">{row.item.price}</StyledTableCell>
 
               <StyledTableCell align="right">
@@ -99,9 +98,33 @@ export default function Cart() {
           ))}
         </TableBody>
       </Table>
-        <Box>
-            <Button onClick={cartCleaner} sx={{color: 'red'}}> TOTAL {cart?.totalPrice} $</Button>
-        </Box>
+
+        <Grid container 
+        sx={{m: '0 10px', 
+        width: '200px', 
+        height: '100%', 
+        
+        
+         
+        }}>
+          <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', margin: '12%'}}>
+          <Typography textAlign='center' variant='h5'>Summary</Typography>
+          
+          <StyledTableCell >Subtotal {cart?.totalPrice} $</StyledTableCell>
+          
+          <StyledTableCell >Shipping 10 $</StyledTableCell>
+
+          <Typography display='flex' textAlign='center'> <h3>TOTAL {cart?.totalPrice + 10} $</h3></Typography>
+          </Box>
+
+            <Button onClick={cartCleaner} 
+            sx={{color: 'red', 
+            border: '1px solid black', 
+            background: '#3e5e70', 
+            display: 'flex', 
+            alignSelf: 'flex-end',
+            marginLeft: '30%', maxHeight: '10vh'}}>Buy now</Button>
+        </Grid>
     </TableContainer>
   );
 }
