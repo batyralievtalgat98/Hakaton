@@ -49,18 +49,11 @@
       "id": 9
     },
     {
-<<<<<<< HEAD
-      "name": "sa",
-      "description": "asdfg",
-      "price": null,
-      "picture": "SAdf",
-=======
       "name": "dgsg",
       "description": "fgfgf",
       "price": null,
       "picture": "dsdsggf",
       "type": "gfdsg",
->>>>>>> b5d3e923c5a7761a12f09da170e9b8b3e24ceb64
       "id": 10
     }
   ]
