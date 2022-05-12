@@ -1,4 +1,4 @@
-import { Grid, ImageList, ImageListItem, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import  "./OurPartners.css";
@@ -49,7 +49,7 @@ const OurPartners = () => {
 
       <Typography variant="h3" sx={{textAlign: 'center', fontWeight: 'bold'}} >OUR<br/> PARTNERS</Typography>
 
-<Grid container spacing={2} sx={{ maxWidth: '1100px', alignItems: 'center' }} className='OurPartners'>
+<Grid container sx={{ maxWidth: '1100px', alignItems: 'center' }} className='OurPartners'>
 
    {itemData.map((item) => (
      <Grid  md={3} xs={12} sm={6}  >
@@ -63,6 +63,7 @@ const OurPartners = () => {
     width={250}
     height={150}
     align='center'
+    
 
     />
     </Box>

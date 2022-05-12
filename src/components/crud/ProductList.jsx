@@ -4,19 +4,21 @@ import React, { useEffect, useState } from 'react';
 
 
 import { useProducts } from '../../contexts/CrudContextProvider';
-import { Box, Grid, Pagination, Typography } from '@mui/material';
+import { Box, Pagination, Typography } from '@mui/material';
 import ProductCard from './ProductCard';
 import { useSearchParams } from 'react-router-dom';
 
 const ProductList = () => {
   const { products, getProducts } = useProducts();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
 
 
   useEffect(() => {
     getProducts();
   }, []);
+
+  
 
   useEffect(() => {
     getProducts()
