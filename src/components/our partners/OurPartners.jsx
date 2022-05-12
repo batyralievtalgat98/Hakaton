@@ -1,4 +1,4 @@
-import { Grid, ImageList, ImageListItem, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import  "./OurPartners.css";
@@ -63,6 +63,7 @@ const OurPartners = () => {
     width={250}
     height={150}
     align='center'
+    
 
     />
     </Box>
