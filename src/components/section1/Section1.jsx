@@ -3,7 +3,23 @@ import React from 'react';
 import wing from '../image/wine.png'
 
 import {Link} from 'react-router-dom'
+import styled from '@emotion/styled';
 const Section1 = () => {
+
+
+  const StyledButton = styled(Button)`
+  background-color: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  &:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black
+  }
+
+`
+  
   return (
 <>
       <Box sx={{background:'#F3F3F3',zIndex: -1, borderBottomRightRadius:'40%',paddingBottom:'5vw'}}>
@@ -14,7 +30,7 @@ const Section1 = () => {
   WE'LL MAKE IT EASY
   </Typography>
  <Link to='/products'> 
-  <Button>GO TO STORE</Button>
+  <StyledButton >GO TO STORE</StyledButton>
   </Link>
   </Grid>
 
