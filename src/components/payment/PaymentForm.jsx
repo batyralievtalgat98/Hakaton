@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
+import { Link } from "react-router-dom";
 
 const PaymentForm = () => {
   const [focus, SetFocus] = useState("");
@@ -33,7 +34,19 @@ const PaymentForm = () => {
 	};
 
 	return (
+<div className="order-container">
+   
+
+
+
 		<div id="PaymentForm">
+
+    <h1 id="order-header">Order Form</h1>
+    <input type="text" placeholder='Name'/>
+    <input type="text" placeholder='Address' />
+    <input id="number-inp" type="number" placeholder='number' />
+
+
 			<Cards
 				cvc={data.cvc}
 				focused={focus}
@@ -118,12 +131,14 @@ const PaymentForm = () => {
           onFocus={(e) => SetFocus(e.target.name)}
 				/>
 
-        
+        <Link to="/">
         <button id='payment-button'>PAY NOW</button>
+        </Link>
         
 
 			</form>
 		</div>
+    </div>
 	);
 };
 

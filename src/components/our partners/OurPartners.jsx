@@ -51,8 +51,8 @@ const OurPartners = () => {
 
 <Grid container sx={{ maxWidth: '1100px', alignItems: 'center' }} className='OurPartners'>
 
-   {itemData.map((item) => (
-     <Grid  md={3} xs={12} sm={6}  >
+   {itemData.map((item, index) => (
+     <Grid item md={3} xs={12} sm={6} key={index} >
        <Box sx={{display: { xs:'block', sm: 'flex' }}}   className='imageOurPartners' >
     <img 
   
