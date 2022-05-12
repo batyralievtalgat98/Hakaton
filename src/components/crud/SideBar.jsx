@@ -19,8 +19,8 @@ const SideBar = () => {
 
 
   return (
-    <Grid item md={3}>
-    <Paper elevation={5} sx={{ p: 2 , boxShadow: 'none'}}>
+    <Grid item md={4}>
+    <Paper elevation={5} sx={{ p: 2 , boxShadow: 'none',width:'200px'}}>
       <TextField
         fullWidth
         id="input-with-icon-textfield"
@@ -63,9 +63,9 @@ const SideBar = () => {
             />
 
             <FormControlLabel
-              value="rose "
+              value="rose"
               control={<Radio color="error" />}
-              label="rose "
+              label="rose"
               
             />
           </RadioGroup>
