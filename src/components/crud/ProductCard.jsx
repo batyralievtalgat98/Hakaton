@@ -30,15 +30,16 @@ const ProductCard = ({item}) => {
 
   return (
     <div>
-        <Card sx={{ maxWidth: 200, margin:'20px' , minHeight:350}}>
+        <Card sx={{  minHeight:350, minWidth: 220}}>
       <CardMedia
+      sx={{width: '67%'}}
         component="img"
-        height="140"
+        height="200"
         image={item.picture}
         alt={item.name}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent >
+        <Typography sx={{display: 'flex', textAlign: 'center'}} gutterBottom variant="h5" component="div">
           {item.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
