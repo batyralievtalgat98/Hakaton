@@ -67,7 +67,7 @@ export default function Cart() {
   };
 
   return (
-    <TableContainer component={Paper} sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+    <TableContainer component={Paper} sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', my: '30px'}}>
       <Table  sx={{maxWidth: '700px', display:{ xs: 'none', sm: 'table'}}} 
         aria-label="customized table">
         
@@ -161,7 +161,7 @@ export default function Cart() {
           </Box>
 
             <StyledButton className='btnStyle'  onClick={()=>{cartCleaner();navigate('/payment')}} >Buy now</StyledButton>
-
+       
         </Grid>
     </TableContainer>
   );
