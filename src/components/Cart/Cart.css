@@ -22,3 +22,7 @@
   display: flex;
   
 }
+
+.btnStyle{
+  margin: 0 auto !important;
+}
