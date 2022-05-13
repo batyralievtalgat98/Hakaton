@@ -28,10 +28,12 @@ import { Favorite, Person, ShoppingBag } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContextProvider';
 
 const pages = [
-  { name: 'Premium Collection', link: '/collection', id: 1 },
-  { name: 'Store', link: '/products', id: 2 },
-  { name: 'Partners', link: '/partners', id: 3 },
-  { name: 'Contacts', link: '/contacts', id: 4 },
+  { name: 'Home', link: '/', id: 1 },
+
+  { name: 'Our Partners', link: '/partners', id: 2 },
+  { name: 'Store', link: '/products', id: 3 },
+  { name: 'About Us', link: '/about', id: 4 },
+  
   // { name: 'Admin panel', link: '/adminPage', id: 5 },
 ];
 // const settings = ['Logout'];
