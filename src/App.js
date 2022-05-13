@@ -7,6 +7,7 @@ import AuthContextProvider from './contexts/AuthContextProvider';
 import CrudContextProvider from './contexts/CrudContextProvider';
 
 import MainRoutes from './routes/MainRoutes';
+import NotFoundPage from './pages/NotFoundPage';
 
 
 
