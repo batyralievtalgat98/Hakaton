@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useProducts } from '../../contexts/CrudContextProvider';
-
 const ProductDetails = () => {
 
   const {details}= useCart();

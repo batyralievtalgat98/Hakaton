@@ -77,5 +77,11 @@ input, select{
 	border-radius: 10px;
 	border-color: transparent;
 	margin-bottom: 10vh;
+	color: #c84648;
+}
+
+#payment-button:hover {
+	color: white !important;
+	background-color: #c84648 !important;
 }
 

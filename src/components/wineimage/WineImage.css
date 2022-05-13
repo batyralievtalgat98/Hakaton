@@ -1,0 +1,28 @@
+.wineblock{
+  display: flex;
+  max-width:'800px';
+  margin-top: 10px;
+}
+.wineText{
+  text-align: center;
+  margin-top: 20px;
+}
+.wine{
+  width: 300px;
+  margin: 15px
+}
+
+
+.wine img {
+  width: 300px;
+  height: 300px;
+}
+.wineimg{
+
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%
+}
+
+.wine p {
+margin-bottom: 10px;
+}

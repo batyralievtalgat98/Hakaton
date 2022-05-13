@@ -23,8 +23,8 @@ import './navbar.css'
 import { getCountProductsInCart } from '../../helpers/functions';
 import { useCart } from '../../contexts/CartContextProvider';
 
-import { Badge, InputAdornment } from '@mui/material';
-import { Favorite, Person, Search, ShoppingBag } from '@mui/icons-material';
+import { Badge } from '@mui/material';
+import { Favorite, Person, ShoppingBag } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContextProvider';
 
 const pages = [
