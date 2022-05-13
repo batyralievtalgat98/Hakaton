@@ -11,6 +11,8 @@ import NotFoundPage from "../pages/NotFoundPage";
 import PaymentPage from "../pages/PaymentPage";
 import ProductsPage from "../pages/ProductsPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
+import OurPartners from "../components/our partners/OurPartners";
+import AboutUs from "../components/AboutUs/AboutUs";
 
 
 const MainRoutes = () => {
@@ -51,6 +53,16 @@ const MainRoutes = () => {
       link: '/products/:id',
       element: <ProductDetailsPage />,
       id: 7,
+    },
+    {
+      link: '/partners',
+      element: <OurPartners/>,
+      id: 8,
+    },
+    {
+      link: '/about',
+      element: <AboutUs/>,
+      id: 9,
     },
   ];
 
