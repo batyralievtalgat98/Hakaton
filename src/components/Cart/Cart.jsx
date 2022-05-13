@@ -41,6 +41,19 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 export default function Cart() {
   const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
 
+  const StyledButton = styled(Button)`
+  background-color: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  &:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black
+  }
+
+`
+
   const navigate = useNavigate()
   console.log(cart);
 
@@ -147,15 +160,7 @@ export default function Cart() {
           <Typography display='flex' textAlign='center'> <h3>TOTAL {cart?.totalPrice + 10} $</h3></Typography>
           </Box>
 
-            <Button onClick={()=>{cartCleaner();navigate('/payment')}} 
-
-            sx={{color: 'red', 
-            border: '1px solid black', 
-            background: '#3e5e70', 
-            display: 'flex', 
-            alignSelf: 'flex-end',
-            marginLeft: '30%', maxHeight: '10vh'}}
-            >Buy now</Button>
+            <StyledButton className='btnStyle'  onClick={()=>{cartCleaner();navigate('/payment')}} >Buy now</StyledButton>
 
         </Grid>
     </TableContainer>
