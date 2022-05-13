@@ -13,6 +13,7 @@ import ProductsPage from "../pages/ProductsPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 import OurPartners from "../components/our partners/OurPartners";
 import AboutUs from "../components/AboutUs/AboutUs";
+import OurPartnerspage from "../pages/OurPartnerspage";
 
 
 const MainRoutes = () => {
@@ -56,7 +57,7 @@ const MainRoutes = () => {
     },
     {
       link: '/partners',
-      element: <OurPartners/>,
+      element: <OurPartnerspage/>,
       id: 8,
     },
     {

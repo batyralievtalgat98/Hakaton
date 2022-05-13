@@ -4,7 +4,7 @@ import EditProduct from '../components/crud/EditProduct';
 const EditProductPage = () => {
   return (
     <div>
-      asd
+      
       <EditProduct/>
     </div>
   );
